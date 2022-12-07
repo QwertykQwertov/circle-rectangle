@@ -60,6 +60,21 @@
       >
       <span class="label">Светлые</span>
     </div>
+    <hr>
+    <div class="options-field">
+      <select
+        type="select"
+        v-model="store.columns"
+      >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      <span class="label">Кол-во столбцов</span>
+    </div>
   </div>
 </template>
 <script>
@@ -69,6 +84,7 @@ export default {
   data () {
     return {
       store,
+      test: 3,
     }
   },
   created () {
@@ -79,7 +95,6 @@ export default {
   methods: {
     radioChanged (value) {
       this.store.darkMode = value
-      // console.log(this.store.darkMode)
     }
   },
 
@@ -88,7 +103,7 @@ export default {
 <style scoped>
 .left-menu {
   position: fixed;
-  left:0;
+  left: 0;
   width: 30%;
   height: 100%;
   background-color: rgba(208, 201, 201, 0.4);
@@ -105,11 +120,11 @@ export default {
   transition: left 0.5s linear;
 }
 .options-field {
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: left;
   padding-left: 50px;
 }
-.options-field input {
+.options-field input, select {
   zoom: 1.5;
 }
 .label {

@@ -3,7 +3,7 @@
     <LeftMenu />
     <div class="container">
       <div
-        class="wrapper-geometry"
+        :style="{width: countColumns}"
         v-for="(figure, index) in filteredFigure"
         :key="index"
       >
@@ -60,6 +60,9 @@ export default {
         initArr = initArr.filter((el) => el.color != 'yellow')
       }
       return initArr
+    },
+    countColumns () {
+      return Math.floor(100 / this.store.columns) + '%'
     }
   },
   methods: {
@@ -90,9 +93,6 @@ export default {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-.wrapper-geometry {
-  width: 33%;
 }
 .geometry {
   height: 200px;
