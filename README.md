@@ -1,4 +1,4 @@
-# This app is a test task (https://github.com/mSnus/test-task)with simplified requirements and using vue2 instead of react
+# This app is a [test task](https://github.com/mSnus/test-task) with simplified requirements and using vue2 instead of react
 
 # circle-rectangle
 
